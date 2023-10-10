@@ -40,13 +40,45 @@ Here are some examples from current and former members of the Bloom lab.
 
 ## Outline
 
-1. Copyright Page
-2. Title
-3. Abstract
-4. Awknowledgements
-5. Published Content and Contributions
-6. Introduction
-7. Intrahost viral variation and bottlenecks
-8. Measles SSPE and phylogeography
-9. Visualization tools
-10. Conclusion (and Future Directions)
+### 1. Copyright Page
+
+William Hannon, 2023
+
+### 2. Title
+
+Leveraging computational approaches to study virus evolution
+
+### 3. Abstract
+
+*Introduce the general theme of my graduate study. Then, go into individual components and how they're tied together. The length will probably be 1/2 to 1 full page. There will should be around 5 short paragraphs.*
+
+### 4. Awknowledgements
+
+1. Jesse Bloom
+2. Alison Feder
+3. Andrew Butler
+4. Sarah Hilton and the rest of the lab
+5. Mark, Maia, Darren, Willy, Richard, and Pam
+6. Justin
+7. Family (Mom, Pa, Aunt, Uncle, Luc, Claire)
+8. Grace
+
+### 5. Introduction
+
+Chapter 0 will be the introduction. I'll go into detail on each of the major topic covered in chapters 1-3.
+
+### 6. Intrahost viral variation and bottlenecks
+
+Chapter 1 will be my work on intrahost viral evolution and bottlenecks.
+
+### 7. Measles SSPE and phylogeography
+
+Chapter 2 will transition into intrahost evolution and the spatial-temporal dynamics of a chronic infection.
+
+### 8. Visualization tools
+
+Chapter 3 will be about `dms-viz` and developing tools for biologists.
+
+### 9. Conclusion (and Future Directions)
+
+Chapter 4 will give a brief synopysis of each of the major topics that I worked on. I'll also introduce some of the things I think will be very important in the future.
