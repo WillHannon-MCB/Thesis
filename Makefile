@@ -5,6 +5,8 @@ latex:
 	pandoc \
 		--metadata-file=metadata.yml \
 		--natbib \
+		--top-level-division=chapter \
+		--toc \
 		--template=thesis.tex \
 		-o output/thesis.tex \
 		chapters/*.md
