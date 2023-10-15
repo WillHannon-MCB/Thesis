@@ -212,62 +212,60 @@ After identifying and clustering SNVs present in every specimen, we extended thi
 
 ### Assessing physical linkage in Illumina reads
 
-We used a statistical framework adopted from the haplotyping approach CliqueSNV to determine if SNV co-occurrence on individual Illumina reads supported the existence of haplotypes G1 and G2(49). Specifically, CliqueSNV asks if two SNVs, A and B, are linked by estimating the probability that the number of reads spanning the two loci that contain both A and B is at least the observed number, O_AB, under the assumption that the AB haplotype is very rare (i.e., frequency below τ). If this probability is low, the AB haplotype cannot be readily explained by sequencing errors, and A and B are classified as linked. Mathematically, CliqueSNV asks if
+We used a statistical framework adopted from the haplotyping approach CliqueSNV to determine if SNV co-occurrence on individual Illumina reads supported the existence of haplotypes G1 and G2(49). Specifically, CliqueSNV asks if two SNVs, $A$ and $B$, are linked by estimating the probability that the number of reads spanning the two loci that contain both $A$ and $B$ is at least the observed number, $O_{AB}$, under the assumption that the $AB$ haplotype is very rare (i.e., frequency below $\tau$). If this probability is low, the $AB$ haplotype cannot be readily explained by sequencing errors, and $A$ and $B$ are classified as linked. Mathematically, CliqueSNV asks if
 
-\begin{equation}
+$$
 \Pr(x \geq O_{AB} | T_{AB} \leq \tau) = 1 - \Pr(x < O_{AB} | T_{AB} \leq \tau)
-\end{equation}
+$$
 
-\begin{equation}
+$$
 1 - \sum_{i=0}^{O_{AB}-1} \binom{n}{i} \tau^i (1-\tau)^{n-i} \leq \frac{0.05}{N}
-\end{equation}
+$$
 
-where T_AB  is the true frequency of the AB haplotype, n is the total number of reads spanning the two loci (regardless of allelic identity) and N is the total number of pairs of sites compared.  When this equation is true, SNVs A and B are classified as linked.
+where $T_{AB}$  is the true frequency of the $AB$ haplotype, $n$ is the total number of reads spanning the two loci (regardless of allelic identity) and $N$ is the total number of pairs of sites compared.  When this equation is true, SNVs $A$ and $B$ are classified as linked.
 
-Bridging reads can also provide strong evidence that two SNVs occur on different haplotypes. Specifically, CliqueSNV calculates the probability of observing at most O_AB reads spanning A and B under the assumption that the AB haplotype is common (i.e., frequency above τ). If this probability is low, the hypothesis of a common AB haplotype is rejected, and A and B are classified as forbidden. Mathematically, CliqueSNV asks if
+Bridging reads can also provide strong evidence that two SNVs occur on different haplotypes. Specifically, CliqueSNV calculates the probability of observing at most $O_{AB}$ reads spanning $A$ and $B$ under the assumption that the $AB$ haplotype is common (i.e., frequency above $\tau$). If this probability is low, the hypothesis of a common $AB$ haplotype is rejected, and $A$ and $B$ are classified as forbidden. Mathematically, CliqueSNV asks if
 
-\begin{equation}
+$$
 \Pr(x \leq O_{AB} | T_{AB} \geq \tau) = \sum_{i=0}^{O_{AB}} \binom{n}{i} \tau^i (1-\tau)^{n-i} \leq \frac{0.05}{N}
-\end{equation}
+$$
 
-where all terms are defined as in the previous definition. When this equation is true, SNVs A and B are classified as forbidden. Note, failure to classify two SNVs as forbidden does not imply that they are linked.
+where all terms are defined as in the previous definition. When this equation is true, SNVs $A$ and $B$ are classified as forbidden. Note, failure to classify two SNVs as forbidden does not imply that they are linked.
 
-For all putatively G1 or G2 SNVs, we collected all reads across all tissues that bridged any two SNVs and considered all pairs of SNVs with at least 10 bridging reads.  Of the 212 SNV pairs, 138 were composed of two putatively G1 SNVs, 58 were composed of two putatively G2 SNVs or 16 were composed of one putatively G1 SNV and one putatively G2 SNVs for separate plotting. For each pair of SNVs, we tested separately if they were statistically linked and forbidden for τ=0.05.
+For all putatively G1 or G2 SNVs, we collected all reads across all tissues that bridged any two SNVs and considered all pairs of SNVs with at least 10 bridging reads. Of the 212 SNV pairs, 138 were composed of two putatively G1 SNVs, 58 were composed of two putatively G2 SNVs or 16 were composed of one putatively G1 SNV and one putatively G2 SNVs for separate plotting. For each pair of SNVs, we tested separately if they were statistically linked and forbidden for $\tau = 0.05$.
 
 ### Phylogenetic analysis
 
 After identifying clusters of SNVs forming putative haplotypes, we used the algorithm SPRUCE as implemented in the software tool MACHINA (https://github.com/raphael-group/machina) to find all phylogenetic trees that could explain the genetic relationships between these haplotypes and were also consistent with the average haplotype frequencies across the specimens (52).
 
-In brief, SPRUCE accepts the frequencies of clusters of mutations (partial haplotypes) across multiple samples and exhaustively considers all tree-like relationships between these partial haplotypes. It then systematically eliminates potential trees that violate any of the following three assumptions: (1) if partial haplotype A descends from partial haplotype B, the frequency of A must not exceed the frequency of B in any sample, (2)  the total frequency of all haplotypes cannot exceed 1 in any sample, and (3) the genetic relationships among partial haplotypes are the same across all samples. Trees must be constructed in this way (as opposed to classical phylogenetic approaches) because we cannot directly measure full haplotypes – we must infer them jointly with the tree itself. We calculated an inclusive error threshold around each mean haplotype frequency by taking the minimum and maximum frequency of haplotype SNVs in each specimen. There were 36 candidate trees that plausibly described the phylogenetic relationship among haplotype clusters.
+In brief, SPRUCE accepts the frequencies of clusters of mutations (partial haplotypes) across multiple samples and exhaustively considers all tree-like relationships between these partial haplotypes. It then systematically eliminates potential trees that violate any of the following three assumptions: (1) if partial haplotype $A$ descends from partial haplotype $B$, the frequency of $A$ must not exceed the frequency of $B$ in any sample, (2)  the total frequency of all haplotypes cannot exceed 1 in any sample, and (3) the genetic relationships among partial haplotypes are the same across all samples. Trees must be constructed in this way (as opposed to classical phylogenetic approaches) because we cannot directly measure full haplotypes – we must infer them jointly with the tree itself. We calculated an inclusive error threshold around each mean haplotype frequency by taking the minimum and maximum frequency of haplotype SNVs in each specimen. There were 36 candidate trees that plausibly described the phylogenetic relationship among haplotype clusters.
 
-To narrow down the space of possible trees, we leveraged reads that bridged segregating loci on pairs of haplotype cluster backgrounds to test whether the co-occurrence of haplotype-specific SNVs supported linkage between the two clusters (49). We first applied this approach to assign all haplotype clusters to either the G1 or G2 background. Specifically, for each cluster, we identified all SNVs on the focal cluster with reads overlapping either a G1 or G2 SNV. Because G1 and G2 are mutually exclusive, the absence of a G1 allele implies the presence of a G2 allele. For a given SNV on cluster c in a given specimen s, we identified all read counts x11, x10, x01, and x00, where x11 represents the number of reads overlapping the cluster allele and G1, x10 represents the number of reads overlapping the cluster allele and G2, x01 represents the number of reads overlapping the non-cluster allele and G1 and x00 represents the number of reads overlapping the non-cluster allele and G2. If the cluster allele is on G1, the likelihood of observing the distribution of overlapping reads is multinomially distributed:
+To narrow down the space of possible trees, we leveraged reads that bridged segregating loci on pairs of haplotype cluster backgrounds to test whether the co-occurrence of haplotype-specific SNVs supported linkage between the two clusters (49). We first applied this approach to assign all haplotype clusters to either the G1 or G2 background. Specifically, for each cluster, we identified all SNVs on the focal cluster with reads overlapping either a G1 or G2 SNV. Because G1 and G2 are mutually exclusive, the absence of a G1 allele implies the presence of a G2 allele. For a given SNV on cluster $c$ in a given specimen $s$, we identified all read counts $x_{11}$, $x_{10}$, $x_{01}$, and $x_{00}$, where $x_{11}$ represents the number of reads overlapping the cluster allele and G1, $x_{10}$ represents the number of reads overlapping the cluster allele and G2, $x_{01}$ represents the number of reads overlapping the non-cluster allele and G1 and $x_{00}$ represents the number of reads overlapping the non-cluster allele and G2. If the cluster allele is on G1, the likelihood of observing the distribution of overlapping reads is multinomially distributed:
 
-\begin{equation}
-\text{lik}(x_{11},x_{10},x_{01},x_{00} | c \text{ on } G_1 \text{ in } s) = \frac{(x_{11} + x_{10} + x_{01} + x_{00})!}{x_{11}! x_{10}! x_{01}! x_{00}!} f_{G1,11}^{x_{11}} f_{G1,10}^{x_{10}} f_{G1,01}^{x_{01}} f_{G1,00}^{x_{00}}
-\end{equation}
+$$\text{lik}(x_{11},x_{10},x_{01},x_{00} | c \text{ on } G_1 \text{ in } s) = \frac{(x_{11} + x_{10} + x_{01} + x_{00})!}{x_{11}! x_{10}! x_{01}! x_{00}!} f_{G1,11}^{x_{11}} f_{G1,10}^{x_{10}} f_{G1,01}^{x_{01}} f_{G1,00}^{x_{00}}
+$$
 
-where $f_{G1,11} = \frac{f_{c,s} + \epsilon}{1 + 4\epsilon}$, $f_{G1,10} = \frac{\max(0, f_{G1,s} - f_c + \epsilon)}{1 + 4\epsilon}$, $f_{G1,01} = \frac{\epsilon}{1 + 4\epsilon}$, and $f_{G1,00} = 1-f_{G1,11} - f_{G1,10} - f_{G1,01}$ and $f_{G1,s}$ is the frequency of G1 in specimen s and $f_{c,s}$ is the frequency of cluster c in specimen s. The frequency of a cluster (or G1 or G2) in a specimen was calculated as the average frequency of all component SNVs of that cluster. For these analyses, we chose ε=0.01 to incorporate sampling error in our estimated frequencies.  Alternatively, if the cluster allele is on G2, the likelihood of observing the distribution of overlapping reads is given by:
+where $f_{G1,11} = \frac{f_{c,s} + \epsilon}{1 + 4\epsilon}$, $f_{G1,10} = \frac{\max(0, f_{G1,s} - f_c + \epsilon)}{1 + 4\epsilon}$, $f_{G1,01} = \frac{\epsilon}{1 + 4\epsilon}$, and $f_{G1,00} = 1-f_{G1,11} - f_{G1,10} - f_{G1,01}$ and $f_{G1,s}$ is the frequency of G1 in specimen $s$ and $f_{c,s}$ is the frequency of cluster $c$ in specimen $s$. The frequency of a cluster (or G1 or G2) in a specimen was calculated as the average frequency of all component SNVs of that cluster. For these analyses, we chose $\epsilon = 0.01$ to incorporate sampling error in our estimated frequencies.  Alternatively, if the cluster allele is on G2, the likelihood of observing the distribution of overlapping reads is given by:
 
-\begin{equation}
-\text{lik}(x_{11}, x_{10}, x_{01}, x_{00} | c \text{ on } G2 \text{ in } s) = \frac{(x_{11} + x_{10} + x_{01} + x_{00})!}{x_{11}! x_{10}! x_{01}! x_{00}!} f_{G2,11}^{x_{11}} f_{G2,10}^{x_{10}} f_{G2,01}^{x_{01}} f_{G2,00}^{x_{00}}
-\end{equation}
+$$\text{lik}(x_{11}, x_{10}, x_{01}, x_{00} | c \text{ on } G2 \text{ in } s) = \frac{(x_{11} + x_{10} + x_{01} + x_{00})!}{x_{11}! x_{10}! x_{01}! x_{00}!} f_{G2,11}^{x_{11}} f_{G2,10}^{x_{10}} f_{G2,01}^{x_{01}} f_{G2,00}^{x_{00}}
+$$
 
 where $f_{G2,11} = \frac{\epsilon}{1 + 4\epsilon}$, $f_{G2,10} = \frac{f_c + \epsilon}{1 + 4\epsilon}$
 , $f_{G2,01} = 1 - f_{G2,11} - f_{G2,10} - f_{G2,00}$
-, and $f_{G2,00} = \max\left(0, \frac{1 - f_{G1,s} - f_c + \epsilon}{1 + 4\epsilon}\right)$ We then assess the weight of evidence for a SNV on cluster c belonging to a G1 or G2 background across the set of all specimens S based on read overlap via AIC:
+, and $f_{G2,00} = \max\left(0, \frac{1 - f_{G1,s} - f_c + \epsilon}{1 + 4\epsilon}\right)$ We then assess the weight of evidence for a SNV on cluster $c$ belonging to a G1 or G2 background across the set of all specimens $S$ based on read overlap via AIC:
 
-\begin{equation}
+$$
 AIC_{G1} = -2 \sum_{s \in S} \log \text{lik}\left(x_{11}, x_{10}, x_{01}, x_{00} \mid c \text{ on } G1 \text{ in } s\right)
-\end{equation}
+$$
 
-\begin{equation}
+$$
 AIC_{G2} = -2 \sum_{s \in S} \log 
 \text{lik}\left(x_{11}, x_{10}, x_{01}, x_{00} \mid c \text{ on } G2 \text{ in } s\right)
-\end{equation}
+$$
 
-We can then assign the SNV as supporting assignment of cluster c to G1, G2, or neither via the relative likelihood ratio framework. We tested each SNV on cluster c independently, and assigned a cluster to G1 or G2 if all cluster SNVs supported the assignment. The only cluster unable to be assigned in this way was cluster 12, which had 232 SNV pairs assigned to G1, 5 assigned to G2 and 25 inconclusive. The 30 SNV pairs not supporting G1 assignment were in the highly mutated M region where recurrent mutations are likely, and all 5 SNV pairs supporting G2 were C to T mutations. We therefore assigned cluster 12 to G1. 
-Using this approach, we were able to filter down the number of plausible trees from 36 trees to only 2 trees. Both trees had identical structures apart from a single prediction that cluster 6 was descended from cluster 2 on one tree but not the other. Using the approach described above with reads that bridged segregating loci on cluster 6 and cluster 2, we were able to show that cluster 6 was not linked to cluster 2 and therefore could not be descended from cluster 2. There were 5422 bridging reads over three pairs of SNVs in cluster 2 and cluster 6 across three tissues (Cerebellum, Cerebellum Nucleus, and Brain Stem) with the highest coverage over both clusters. Of these 5422 reads, 1928 contained cluster 2 SNVs, 435 contained cluster 6 SNVs, and 0 contained both cluster 2 and cluster 6 SNVs. Thus, only a single tree predicted by SPRUCE could plausibly explain the phylogenetic relationship of haplotypes in the brain. The full analysis and a more detailed description of this method can be found in this notebook on GitHub – https://github.com/jbloomlab/MeV_SSPE_Dynamics/blob/main/results/notebooks/filter-spruce-trees.html. 
+We can then assign the SNV as supporting assignment of cluster $c$ to G1, G2, or neither via the relative likelihood ratio framework. We tested each SNV on cluster $c$ independently, and assigned a cluster to G1 or G2 if all cluster SNVs supported the assignment. The only cluster unable to be assigned in this way was cluster 12, which had 232 SNV pairs assigned to G1, 5 assigned to G2 and 25 inconclusive. The 30 SNV pairs not supporting G1 assignment were in the highly mutated M region where recurrent mutations are likely, and all 5 SNV pairs supporting G2 were C to T mutations. We therefore assigned cluster 12 to G1.
 
+Using this approach, we were able to filter down the number of plausible trees from 36 trees to only 2 trees. Both trees had identical structures apart from a single prediction that cluster 6 was descended from cluster 2 on one tree but not the other. Using the approach described above with reads that bridged segregating loci on cluster 6 and cluster 2, we were able to show that cluster 6 was not linked to cluster 2 and therefore could not be descended from cluster 2. There were 5422 bridging reads over three pairs of SNVs in cluster 2 and cluster 6 across three tissues (Cerebellum, Cerebellum Nucleus, and Brain Stem) with the highest coverage over both clusters. Of these 5422 reads, 1928 contained cluster 2 SNVs, 435 contained cluster 6 SNVs, and 0 contained both cluster 2 and cluster 6 SNVs. Thus, only a single tree predicted by SPRUCE could plausibly explain the phylogenetic relationship of haplotypes in the brain. The full analysis and a more detailed description of this method can be found in this notebook on GitHub – https://github.com/jbloomlab/MeV_SSPE_Dynamics/blob/main/results/notebooks/filter-spruce-trees.html.
 
 ## Data availability
 
@@ -275,6 +273,4 @@ The raw Illumina sequencing reads are available on the NCBI Sequence Read Archiv
 
 ## Code availability
 
-The code used to perform all analysis in the paper is available on GitHub at  https://github.com/jbloomlab/MeV_SSPE_Dynamics.
-
-The repository is also archived on Zenodo at DOI 10.5281/zenodo.8412085
+The code used to perform all analysis in the paper is available on GitHub at  https://github.com/jbloomlab/MeV_SSPE_Dynamics. The repository is also archived on Zenodo at DOI 10.5281/zenodo.8412085
