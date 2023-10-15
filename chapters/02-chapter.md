@@ -274,3 +274,67 @@ The raw Illumina sequencing reads are available on the NCBI Sequence Read Archiv
 ## Code availability
 
 The code used to perform all analysis in the paper is available on GitHub at  https://github.com/jbloomlab/MeV_SSPE_Dynamics. The repository is also archived on Zenodo at DOI 10.5281/zenodo.8412085
+
+## Figures
+
+![Figure 2.1](/figures/02-chapter/figure-1.png)
+**Figure 1**: *Robust MeV replication and transcription in two brain specimens*. (A, B, left panels) Methylene blue stained RNA gels comparing the integrity of RNA extracted from SSPE brain specimens to that of HeLa cells uninfected or infected with a MeV vaccine strain. (A, B, right panels) Northern blots of the gels probed using (A) a probe detecting positive strand MeV N (monocistronic) and N-P (dicistronic) mRNAs or (B) a probe detecting negative sense genomic RNA. (C) Pie chart showing the number of reads that aligned to MeV genome, human genome (release #38) and unaligned reads in specimen SSPE1 and SSPE2. (D) MeV genome coverage plot showing the positive (blue line) and negative (red line) strand reads in specimen SSPE1. x-axis shows schematic of MeV genome in negative sense orientation and y-axis represents reads per nucleotide.
+
+![Figure 2.2](/figures/02-chapter/figure-2.png)
+**Figure 2**: *Frequency and genomic location of positions at variance between the reference genome and the SSPE1 (top) and SSPE2 (bottom) sequences*. x-axis: MeV genome location. y-axis: allele frequency. Nucleotide variants detected at nearly 100% frequency are shown in yellow, those detected at 60-75% in blue, those at 25-40% in red and those at other frequencies in grey. Variants shown in black are candidate neuropathogenesis drivers. Dots represent A to G and U to C transitions that may have been introduced by ADAR1 editing (78, 79), triangles represent other transitions and squares represent transversions.
+
+![Figure 2.3](/figures/02-chapter/figure-3.png)
+**Figure 3**: *CG1 and CG2 replicate in the same cells and occasionally form spatially segregated replication centers*. In situ hybridization with CG1 (red) and CG2 (green) specific probes in temporal lobe tissue. Nuclei are counterstained with DAPI (blue). Red box highlights the area shown on the right. 
+
+![Figure 2.4](/figures/02-chapter/figure-4.png)
+**Figure 4**: *Distribution of MeV plus and minus reads in brain specimens*. MeV genome coverage plot showing positive (blue line) and negative (red line) strand reads. x-axis: MeV genome; y-axis reads per nucleotide in a logarithmic scale . Pie charts show the ratio of positive (blue) and negative (red) strand reads. 
+
+![Figure 2.5](/figures/02-chapter/figure-5.png)
+**Figure 5**: *Frequency of G1 and G2 mutations and of two potential neuropathogenesis driver mutations in all brain specimens*. X-axis: brain specimens; y-axis; frequencies of G1 mutations (blue), G2 mutations (red) and all other mutations (grey). Black circles highlight F-Q527* mutations and black squares highlight M-F50S mutations. 
+
+![Figure 2.6](/figures/02-chapter/figure-6.png)
+**Figure 6**: *Identification of a spatially restricted G1 subpopulation in frontal cortex 2*. For each panel x-axis: MeV genome location; y-axis: allele frequency. SNVs attributed to G-01 are shown in light blue and linked with a line. SNVs attributed to G-01b are shown in dark blue and linked with a line. SNVs attributed to G-01a are shown in black and linked with a line. SNVs attributed to G2 are shown in dark red and linked with a line. All other SNVs are shown in grey. SNVs are defined relative to BA.
+
+![Figure 2.7](/figures/02-chapter/figure-7.png)
+**Figure 7**: *Spatial dynamics of G1 and G2 subpopulations in the brain. (A, left panel) Phylogenetic tree of G1, G2, and their descendants. (A, right panel)*: location of mutations attributed to the Brain Ancestor, G-01, G-FC2, G1 and its descendants (top), and G2 and its descendants (bottom). Crosses represent A to G and U to C transitions, vertical ticks represent other mutations. (B) Brain drawing with superimposed pie charts indicating the frequencies of G1 and G2 descendants. Area of pie chart sectors reflects the frequency of each cluster that are colored according to the key on the right. Large, intermediate, or small pies represent specimens with >13%, 5-13% or less than 5% MeV reads, respectively. C, cortex; L, lobe; U, upper; Int, internal; TN, towards nucleus. Brain image is from BioRender. 
+
+![Figure 2.8](/figures/02-chapter/figure-8.png)
+**Figure 8**: *Hypothetical reconstruction of the evolution of a MeV collective infectious unit in a human brain. X-axis: time*. Y-axis: population size. Cartoon illustrating hypothesized MeV brain expansion over time, including the development of G1 (red), G2 (blue), G-FC2 (black) subpopulations, transit among brain regions, and modulation of F tail truncation. We do not illustrate the simultaneous process of viral diversification forming the G1 and G2 descendant subclusters, or H I8T mutational dynamics.
+
+## Supplemental Figures
+
+![Figure S2.1](/figures/02-chapter/figure-S1.png)
+**Supplemental Figure 1**: *Schematic of high fidelity ampFISH*. (Top) Four probes used simultaneously to discriminate at each SNV site. The grey regions of the probes bind to the targets. The right and left acceptor probes bind on either side of the region encompassing the SNV. Only one of the donor probes can bind to the SNV region depending on the SNV that is present in the genome. (Center and bottom) The binding of the left donor-mut to the CG2 target sequence initiates a strand displacement reaction in the left acceptor that leads to generation of a green HCR signal using Cy3-labeled HCR hairpins H1 and H2. The binding of the right donor-wt to the CG1 genome target sequence initiates a strand-displacement reaction in the right acceptor that leads to generation of a red HCR signal using Cy5-labeled HCR hairpins H3 and H4. To further improve the signal strength, we targeted a total of nine SNVs in the genomes using four sets of probes for each genome, where all SNVs in the GC1 gave rise to red signals and all SNVs in the GC2 gave rise to green signals. 
+
+![Figure S2.2](/figures/02-chapter/figure-S2.png)
+**Supplemental Figure 2**: *Discrimination of CG1 and CG2 by high fidelity ampFISH*. (A-C) Confocal images showing nuclei in blue, MeV M mRNA in grey, CG1 in red and CG2 in green. (A) SSPE temporal lobe, (B) SSPE occipital lobe and (C) healthy human cerebral cortex. Individual channels for the yellow boxed areas are shown in the right panels.
+
+![Figure S2.3](/figures/02-chapter/figure-S3.png)
+**Supplemental Figure 3**: *Absolute and relative amounts of CG1 and CG2 in individual infected cells of a temporal lobe specimen*. (A) Eleven infected cells marked for ImageJ analysis; yellow outlines identify the areas analyzed. CG1 signals are in red, CG2 signals in green. Nuclei are counterstained with DAPI (blue). (B) Table reporting intensity levels of the CG1 (red squares) and CG2 (green squares) signals in the 11 cells marked in panel (A). Each square represents 5 intensity units. For calculating the signal intensity of CG1 and CG2 in each cell, we divided either CG1 or CG2 signal by the total signal from both probes. As an example, for cell number 1, CG1 signal intensity is 15 units and CG2 is 20 units so the percentage of CG1 signal in that cell will be 15/35*100 i.e., 42.8% and the percentage of CG2 will be 57.2%.
+
+![Figure S2.4](/figures/02-chapter/figure-S4.png)
+**Supplemental Figure 4**: *Quality of RNA extracted from thawed brain specimens*. Specimens analyzed are listed above each lane. C, cortex; TN, towards nucleus, L, lobe. Top panel: methylene blue stained RNA gel. The ribosomal 28S and 18S RNA positions are indicated. Middle panel: Northern blot probed with N(+) probe detecting positive strand RNA. The N and N-P mRNAs are indicated. Bottom panel: Northern blot probed with L(-) probe detecting genomic RNA. DI RNA: short defective RNAs.
+
+![Figure S2.5](/figures/02-chapter/figure-S5.png)
+**Supplemental Figure 5**: *Percentage of reads in different SSPE brain specimens that map to MeV*. Large, intermediate, or small circles represent specimens with >13%, 5-13% or less than 5% MeV reads, respectively. Anatomically closer brain regions are indicated with the same color circle outlines. L = lobe, C = cortex, U = Upper, Int = Internal and TN = Towards nucleus. Image was generated in BioRender.
+
+![Figure S2.6](/figures/02-chapter/figure-S6.png)
+**Supplemental Figure 6**: *Assessing linkage of G1 and G2 SNVs in Illumina reads*. Y-axis: proportion of SNV pairs with bridging reads showing a statistically significant effect or not for a given test; x-axis: statistical test determining whether a SNV pair is linked (part of the same haplotype) or forbidden (mutually exclusive). Green indicates statistically significant evidence, whereas gray represents the lack of evidence. The absence of evidence for linkage does not imply that a pair of SNVs is forbidden. The converse is also true, that the absence of evidence for two SNVs being forbidden does not mean that they are linked. 138 G1/G1 pairs were tested, 16 G1/G2 pairs were tested, and 58 G2/G2 pairs were tested.
+
+![Figure S2.7](/figures/02-chapter/figure-S7.png)
+**Supplemental Figure 7**: *Read alignment using the longest, highest quality and error corrected (80) reads mapped to the M gene*. RNA from Frontal Cortex 1 (G1 high) and Hippocampus (G2 high) was used for cDNA synthesis using the template switching RT enzyme mix (New England Biolabs) with an N6 TS modified random primer (81). A single library was generated (samples were barcoded and pooled) using the native barcoding SQK-NBD-114-96 Q20+ sequencing kit (Oxford Nanopore Technologies, ONT). The ONT library was sequenced in a single sequencing run using the high-accuracy base-calling model with a minimum Q score of 10 set on an ONT GridION device using one MinION Flow Cell R10.4.1. Using default parameters for all software, the corrected reads obtained (Frontal Cortex 1: 8,585;  Hippocampus: 7,380) were aligned against the M gene using Muscle 3.8.425 in Geneious Prime 2021.1.1. The M-gene mapped reads (Frontal Cortex 1: 477; Hippocampus: 352), were further selected based on coverage of >95% of the M protein coding sequence. The longest reads, namely 57a2eac3-d91e-465f-b823-5cc9c757327f (Frontal Cortex 1) and 25e1cdcf-007f-4260-843b-abd1f4230a30 (Hippocampus) are shown. These reads correspond to the dominant haplotypes in each specimen.  Blue SNVs are G1 and red SNVs are G2.
+
+![Figure S2.8](/figures/02-chapter/figure-S8.png)
+**Supplemental Figure 8**: *MeV mutations at >2% frequency in SSPE brain specimens*. Mutations were called relative to BA. Y-axis: specimen names; x-axis: position of each mutation. Pink blocks show areas where the read depth was too low to confidently call variants.
+
+![Figure S2.9](/figures/02-chapter/figure-S9.png)
+**Supplemental Figure 9**: *The MeV genome population from frontal cortex 2 is genetically distinct from those in all other brain specimens*. (A) Principal components PC1 (x-axis) and PC2 (y-axis) analysis of MeV genome populations. Five groups of genetically similar specimens are encircled by color-coded lines. (B) Brain drawing with superimposed circles of the same color for anatomically close locations. The center of Frontal cortex 2 specimen is indicated in black to mark that its PC analysis position does not reflect its anatomical position. C, cortex; L, lobe; U, upper; Int, internal; TN, towards nucleus. (B) was generated in BioRender.
+
+![Figure S2.10](/figures/02-chapter/figure-S10.png)
+**Supplemental Figure 10**: *Dynamic modulation of F and H cytoplasmic tail mutations*. X-axis: brain specimens; y-axis; allele frequencies. The mean frequency of G1 mutations +/- the standard deviation in G1 frequency in each tissue is shown in blue. The same is shown in red for G2 mutations. The solid black line shows the frequencies of F-Q527* in each tissue and the black dashed line shows frequencies of H-I8T.
+
+![Figure S2.11](/figures/02-chapter/figure-S11.png)
+**Supplemental Figure 11**: *Correlation by frequency identifies genetically linked clusters of mutations*. X-axis: brain specimens; y-axis; allele frequencies. Each facet is a cluster of SNVs identified by their correlation in frequency across all 15 samples (Materials and Methods). The individual SNVs are represented as black lines. A colored ribbon represents the mean frequency of each cluster +/- the standard deviation in each tissue.
+
+![Figure S2.12](/figures/02-chapter/figure-S12.png)
+**Supplemental Figure 12**: *Frequencies of G-01, G2 and their sub-clusters in 15 brain specimens*. x-axis, brain specimens; y-axis, allele frequencies. Top panel: frequencies of G-01 (blue line) and its descendants (shaded areas color-coded according to the key on the right). Bottom panel: frequencies of G2 (red line) and its descendants (shaded areas color-coded according to the key on the right).

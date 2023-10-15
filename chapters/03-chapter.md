@@ -73,3 +73,14 @@ See how `dms-viz` can provide this dataset as an interactive resource here.
 ## Conclusion
 
 We designed `dms-viz`  as a practical and user-friendly approach to visualizing mutation-associated data in the context of protein structures.  Because `dms-viz` is capable of handling various data types and has options for both sharing and privacy, it should be applicable to visualization of a wide range of datasets.
+
+## Figures
+
+![Figure 3.1](/figures/03-chapter/figure-1.png)
+**Figure 1**: *Large mutation-associated datasets are used in a variety of experimental contexts*. They can be used to map antibody footprints on viral glycoproteins, assess the impact of mutations on protein function in a laboratory setting, and identify patterns of selection from natural mutation frequencies.
+
+![Figure 3.2](/figures/03-chapter/figure-2.png)
+**Figure 2**: *Using `dms-viz` involves three components*. (1) The user formats their data using the command line tool `configure-dms-viz`. (2) The user takes the resulting `JSON` specification file and uploads it to `dms-viz.github.io`. (3) The user can choose to either share the `JSON`file, host the `JSON`file and generate a shareable URL link, or export static images.
+
+![Figure 3.3](/figures/03-chapter/figure-3.png)
+**Figure 3**: *`dms-viz` provides a compact interface for exploring mutation-associated data*. The visual component of  `dms-viz` contains a line/point plot that shows a summary of the mutation-metric at all sites, in this case, mutation-escape from the constituents of a therapeutic antibody cocktail measured by DMS of the SARS-CoV-2 receptor binding domain (RBD) (Starr and Greaney, et al., 2021) . The user can zoom into specific regions of interest while maintaining context of the whole dataset using the context plot. Additionally, users can click on points in the  focus plot to get details on every mutation for each site in the detail plot. Finally, sites that are selected on the focus plot by dragging are shown on the interactive protein structure colored by the summary statistic. In this example, the structure shown is the SARS-CoV-2 RBD bound to both antibodies in the therapeutic cocktail (PDB: 6XDG). A collapsible sidebar is used to configure the visualization and select the condition on the interactive protein structure. By collapsing out of view, the sidebar makes the visualization an optimal size for integrating into online platforms like websites and HTML presentation slides.
