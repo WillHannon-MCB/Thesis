@@ -1,2 +1,3 @@
-# Introduction
+# Chapter 0: Introduction
 
+This is where the introduction will go. TBD on what the content is going to be...

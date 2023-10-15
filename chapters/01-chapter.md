@@ -98,9 +98,13 @@ To support the claim that the outbreak occurred in a high-transmissibility envir
 
 We implemented a simple Poisson model of mutation accumulation from Braun et al. to get a theoretical distribution of the number of fixed mutations expected to accumulate in a transmission event (Braun et al., 2021). This model defines a transmission event as a single serial interval, i.e., the length of time between symptom onset in a primary and secondary case. The lambda parameter of the Poisson distribution was derived from the number of substitutions per site in the genome per year (0.0011 substitutions/site/year) and the average length of a serial interval (5.8 days) (Duchene et al., 2020; X. He et al., 2020). The outbreak took place over 16 days; therefore, at most, three intervals could separate the index case from the final infection. We compared the distribution of consensus differences that separated the clade encompassing every sample that qualified for deep sequenced from its inferred root to the theoretical distribution of mutations expected to fix in 1, 2, and 3 serial intervals.
 
+### Code Availability
+
+All code used to run the analyses described in this paper are archived on Github (https://github.com/jbloomlab/SARS-CoV-2_bottleneck) and Zenodo at DOI: 10.5281/zenodo.6456186.
+
 ### Data Availability
 
-All sequencing data are available on the NCBI SRA at the project accession PRJNA803551. All code used to run the analyses described in this paper are archived on Github (https://github.com/jbloomlab/SARS-CoV-2_bottleneck) and Zenodo at DOI: 10.5281/zenodo.6456186.
+All sequencing data are available on the NCBI SRA at the project accession PRJNA803551.
 
 ## Acknowledgements
 
