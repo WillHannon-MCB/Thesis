@@ -1,85 +1,90 @@
-\documentclass{report}
+% ----------------------------------------
+% Configuration of the document
+% ----------------------------------------
+\documentclass[12pt,oneside,letterpaper]{report}
+
+% ----------------------------------------
+% Packages
+% ----------------------------------------
 \usepackage{natbib}
 \usepackage{graphicx} 
 \usepackage{amsmath} 
+\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
+\usepackage[margin=1in, includefoot, letterpaper]{geometry}
+\usepackage{setspace}
 
-
+% ----------------------------------------
+% Body of the document
+% ----------------------------------------
 \begin{document}
 
-% Copywrite Page
+%*****************************************
+% Copyright
+%*****************************************
 \thispagestyle{empty}
-\vspace*{\fill}
 \begin{center}
-© Copyright $year$ \\
-$author$
+© Copyright ${year} \\
+${author}
 \end{center}
 \vspace*{\fill}
 \newpage
 
+%*****************************************
 % Title Page
+%*****************************************
 \thispagestyle{empty}
-\vspace*{\fill}
 \begin{center}
-\huge{$title$} \\
-\vspace{1cm}
-\Large{$author$} \\
-\vspace{1cm}
+\huge{${title}} \\
+\vspace{2cm}
+\Large{${author}} \\
+\vspace{2cm}
 A dissertation \\
 submitted in partial fulfillment of the \\
 requirements for the degree of \\
 \vspace{1cm}
 \textbf{Doctor of Philosophy} \\
 \vspace{1cm}
-$university$ \\
-$year$ \\
+${university} \\
+${year} \\
 \vspace{1cm}
 Reading Committee: \\
-Jesse Bloom, Chair \\
-Gavin Ha \\
-Erick Matsen \\
+${chair}, Chair \\
+${committee}
 \vspace{1cm}
 Program Authorized to Offer Degree: \\
-$program$
+${program}
 \end{center}
-\vspace*{\fill}
 \newpage
 
+
+%*****************************************
 % Abstract
-\thispagestyle{empty}
-\vspace*{\fill}
-\begin{center}
-$university$ \\
-\vspace{1cm}
-\textbf{Abstract} \\
-\vspace{1cm}
-\huge{$title$} \\
-\vspace{1cm}
-\Large{$author$} \\
-\vspace{1cm}
-Chair of the Supervisory Committee: \\
-Associate Member Jesse D. Bloom \\
-Fred Hutchinson Cancer Research Center \\
-\vspace{1cm}
-\end{center}
-\vspace*{\fill}
+%*****************************************
+
+
+%*****************************************
+% Table of Contents
+%*****************************************
 \newpage
 
-% Tabel of Contents
-\tableofcontents
-\newpage
-
+%*****************************************
 % List of Figures
-\listoffigures
+%*****************************************
 \newpage
 
+%*****************************************
 % Awknowledgements
-\chapter*{Acknowledgements}
+%*****************************************
 
+%*****************************************
 % Chapters
-$body$
+%*****************************************
+${body}
 
-% References
-\bibliographystyle{plainnat}
-\bibliography{bibliography/references}
+
+%*****************************************
+% Bibliography
+%*****************************************
 
 \end{document}
