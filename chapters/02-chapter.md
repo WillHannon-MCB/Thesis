@@ -1,8 +1,8 @@
-# Chapter 2: Aquiring Brain tropism: the spatial dynamics and evolution of a measles virus collective infectious unit that drove lethal subacute sclerosing panencephalitis
+# Chapter 2: Acquiring Brain tropism: the spatial dynamics and evolution of a measles virus collective infectious unit that drove lethal subacute sclerosing panencephalitis
 
-A version of this chapter has been submitted to *PLOS Pathogens*:
+A version of this chapter is published in *PLOS Pathogens*:
 
-> Iris Yousaf\*, William W. Hannon\*, Ryan C. Donohue, Christian K. Pfaller, Kalpana Yadav, Ryan J. Dikdan, Sanjay Tyagi, Declan C. Schroeder, Wun-Ju Shieh, Paul A. Rota, Alison F. Feder, Roberto Cattaneo, **Brain tropism acquisition: the spatial dynamics and evolution of a measles virus collective infectious unit that drove lethal subacute sclerosing panencephalitis**, *Submitted*, 2023
+> Iris Yousaf\*, William W. Hannon\*, Ryan C. Donohue, Christian K. Pfaller, Kalpana Yadav, Ryan J. Dikdan, Sanjay Tyagi, Declan C. Schroeder, Wun-Ju Shieh, Paul A. Rota, Alison F. Feder, Roberto Cattaneo, **Brain tropism acquisition: the spatial dynamics and evolution of a measles virus collective infectious unit that drove lethal subacute sclerosing panencephalitis**, *PLOS Pathogens*, 2023
 
 ## Abstract
 
