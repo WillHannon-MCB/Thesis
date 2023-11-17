@@ -1,35 +1,35 @@
-all: pdf html
+all: pdf
 
-# LaTeX generation using pandoc
-latex: 
+# Generate the PDF using xelatex
+pdf: abstract acknowledgements body
+	xelatex -output-directory=output output/main.tex
+	bibtex output/main.aux
+	xelatex -output-directory=output output/main.tex
+	xelatex -output-directory=output output/main.tex
+
+body: 
+	cp -r figures/ output/figures
 	pandoc \
-		--metadata-file=metadata.yml \
 		--natbib \
 		--top-level-division=chapter \
-		--toc \
-		--template=thesis.tex \
-		-o output/thesis.tex \
+		--template=templates/main.tex \
+		-o output/main.tex \
 		chapters/*.md
 
-# PDF generation: This will depend on the LaTeX file being present, so 'latex' target is a dependency.
-pdf: latex
-	xelatex -output-directory=output output/thesis.tex
-	bibtex output/thesis.aux
-	xelatex -output-directory=output output/thesis.tex
-	xelatex -output-directory=output output/thesis.tex
-
-# HTML generation using pandoc
-html: 
+acknowledgements:
 	pandoc \
-		--metadata-file=metadata.yml \
-		--citeproc \
-		--embed-resources \
-		--standalone \
-		-o output/thesis.html \
-		chapters/*.md
+		-o output/acknowledgements.tex \
+		--template=templates/acknowledgements.tex \
+		frontmatter/acknowledgements.md
+
+abstract:
+	pandoc \
+		-o output/abstract.tex \
+		--template=templates/abstract.tex \
+		frontmatter/abstract.md
 
 # Clean the output directory
 clean:
-	rm -f output/*
+	rm -rf output/*
 
-.PHONY: all latex pdf html clean
+.PHONY: all pdf clean

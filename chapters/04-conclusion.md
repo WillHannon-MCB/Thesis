@@ -1,4 +1,4 @@
-# Chapter 4: Conclusion
+# Conclusion
 
 In my graduate work, I developed computational approaches to uncover the dynamics of viral evolution from high-throughput datasets. In **Chapter 1**, I used a spatially resolved deep sequencing dataset to characterize the selective pressures acting in a chronic Measles infection of the brain. In **Chapter 2**, I used deep sequencing data from individuals infected with SARS-CoV-2 to determine if transmission imposes a narrow bottleneck on viral diversity in a superspreading event. Finally, in **Chapter 3**, I built an interactive tool for analyzing deep mutational scanning data and other mutation-based datasets in the context of a 3D protein structure. *In this chapter, I'll discuss the main insights from each of these studies and talk about potential avenues for future research.*
 

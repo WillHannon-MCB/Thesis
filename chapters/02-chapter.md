@@ -1,4 +1,4 @@
-# Chapter 2: Narrow transmission bottlenecks and limited within-host viral diversity during a SARS-CoV-2 outbreak on a fishing boat
+# Narrow transmission bottlenecks and limited within-host viral diversity during a SARS-CoV-2 outbreak on a fishing boat
 
 A version of this chapter was previously published as:
 
@@ -114,66 +114,63 @@ The work in the lab of JDB was supported in part by NIH / NIAID (R01AI141707). J
 
 ## Figures
 
-![Figure 1.1](./figures/01-chapter/figure-1.png)
+![Figure 1.1](figures/01-chapter/figure-1.png)
 **Figure 1**. *An outbreak of SARS-CoV-2 on an isolated fishing boat is an epidemiologically linked cluster of infections*. (A) Schematic showing the timeline of the fishing vessel outbreak. All samples used in this study were taken on day 18 as shown in the figure (relative to the start of pre-departure screening). (B) Donut plot showing the sampling breakdown for all 122 members of the crew. (C) Phylogeny of SARS-CoV-2 genome from the boat. A heatmap to the right shows the nucleotide differences between genomes on the tree. Specimen identification numbers for crew member samples label the leaf nodes of the tree except for those nodes with more than one identical genome. Node sizes are proportional to number of sequences: there is a node representing 26 identical sequences (10101, 10126, 10133, 10105, 10108,  10130, 10031, 10110, 10030, 10124, 10029, 10102, 10038, 10094, 10027, 10118, 10117, 10106, 10091, 10093, 10127, 10116, 10040, 10090, 10036, 10089) and a node representing 4 identical sequences (10107, 10129, 10113, 10028); all other nodes represent unique sequences.
 
 \newpage
 
-![Figure 1.2](./figures/01-chapter/figure-2.png)
+![Figure 1.2](figures/01-chapter/figure-2.png)
 **Figure 2**. *Sequences from the boat form a distinct clade*.  A phylogeny of the 39 crew-member genomes and representative genomes from other circulating clades before the outbreak. Additionally, this phylogeny includes the ten closest matches to each of the 39 crew-member genomes from a custom BLASTN database made with sequences collected from Washington in a two-month interval around the time of the outbreak. We also re-sequenced as a control one sample not from the boat (WA-UW-10136). Most genomes isolated from the boat form a distinct clade broken only by two genomes (hCoV-19/USA/WA-UW-10510/2020 and hCoV-19/USA/WA-UW-10521/2020) annotated with an asterisk.
 
 \newpage
 
-![Figure 1.3](./figures/01-chapter/figure-3.png)
+![Figure 1.3](figures/01-chapter/figure-3.png)
 **Figure 3**. *Robust quality control reveals false-positive variant alleles and samples of poor quality*. Each plot shows the concordance between allele frequencies between replicates for every specimen that we sequenced, with both replicates having greater than 100X coverage in at least 80% of the genome. Alleles that were present in less than 2% of 100 reads in either replicate are colored red. The dotted line represents the 2% frequency threshold. We highlighted the facet headers of ‘poor’ quality crew member samples in red if there was a large discrepancy in allele frequencies between replicates. This figure also shows the non-boat sample (10136) sequenced as a control.
 
 \newpage
 
-![Figure 1.4](./figures/01-chapter/figure-4.png)
+![Figure 1.4](figures/02-chapter/figure-4.png)
 **Figure 4**. *The intra-host spectrum of minor alleles reveals a relatively homogeneous virus population*. (A) Bar graph showing the number of minor variants (< 50% allele frequency) identified in both replicates of each crew member. There was an average of three minor variants per infection across the ten crew members. (B) The minor allele frequency spectrum across all twelve crew member specimens with minor variants.
 
 \newpage
 
-![Figure 1.5](./figures/01-chapter/figure-5.png)
+![Figure 1.5](figures/02-chapter/figure-5.png)
 **Figure 5**. *The spectrum of shared minor variation suggests that the transmission bottleneck is narrow*. (A) A schematic showing the expected pattern of observed allele frequencies for shared variants in either a narrow or wide bottleneck scenario. (B) Each plot represents the frequency of a single nucleotide polymorphism (SNP) across crew members. Variants are called relative to the ancestral sequence of the virus introduced to the boat as inferred from the phylogeny of crew member genomes. The x-axis is ordered by variant frequency.
 
 \newpage
 
 ## Supplemental Figure
 
-![Figure S2.1](./figures/02-chapter/figure-S1.png)
+![Figure S2.1](figures/02-chapter/figure-S1.png)
 **Supplementary Figure 1**. *The boat was a super spreading event*.  (A) We used two standard epidemiological models of outbreaks to simulate an infection on the boat over a range of basic reproduction numbers (R0). The gray block highlights a range of R0 values for SARS-CoV-2 infection in 2020 from a meta analysis of cohorts (95% CI 2.41, 3.90). The dotted vertical lines designate the R0 at which each model recapitulated the percentage of the crew infected on the ship by 16 days. (B) We used a Poisson model from Braun et al. to generate a probability distribution of fixed mutations expected to accumulate over 1, 2, and 3 transmission events (serial intervals). The observed frequency of fixed consensus mutations between the clade containing samples that qualified for resequencing and its inferred ancestral sequence is closest to the distribution of fixed differences from a single transmission event.
 
 \newpage
 
-![Figure S2.2](./figures/02-chapter/figure-S2.png)
+![Figure S2.2](figures/02-chapter/figure-S2.png)
 **Supplementary Figure 2**. *Samples were filtered by completeness*. (A) The pattern of sequencing depth for each replicate of all 23 specimens from the boat, and one control sample that was not from the boat (Specimen-10136, labeled with a blue asterisk), that we resequenced for this study. The number of reads per site is capped at 1000X coverage. Samples colored in red have less than 80% of the genome covered by 100X reads. (B) Completeness refers to the percentage of the genome covered by more than 100X reads. Samples colored and highlighted in red have at least one replicate with less than 80% of the genome covered by 100X reads. These samples were excluded from the downstream variant analysis.
 
 \newpage
 
-![Figure S2.3](./figures/02-chapter/figure-S3.png)
+![Figure S2.3](figures/02-chapter/figure-S3.png)
 **Supplementary Figure 3**. *Comparison between different variant calling methods*. An UpSet plot shows the overlap in the sets of SNPs called by three different variant calling methods – varscan2, lofreq, ivar, and our custom python script using pysam. Variants were covered by more than 100X reads and present at greater than 2% frequency to be included in the set for each variant caller. The majority of variants are called by all four methods. No variants are called by our custom script that aren’t identified by at least one other method.
 
 \newpage
 
-![Figure S2.4](./figures/02-chapter/figure-S4.png)
+![Figure S2.4](figures/02-chapter/figure-S4.png)
 **Supplementary Figure 4**. *Ct value does not correlate with the number of polymorphisms*. Regardless of the variant calling method used, the Ct value of the original nasal swab does not correlate with the number of variants called after filtering out low-frequency (>2%) and poorly covered (>100X) variants. Only samples that passed our quality controls for sequencing completeness (**Supplemental Figure 3B**) and concordance (**Figure 2**) were included in this analysis.
 
 \newpage
 
-![Figure S2.5](./figures/02-chapter/figure-S5.png)
+![Figure S2.5](figures/02-chapter/figure-S5.png)
 **Supplementary Figure 5**. *There is no discernable pattern of minor variants in the genome*. Plot showing every minor variant (>50% allele frequency) identified across the crew members that passed our quality filters. We included variants if they were present in more than 2% of greater than 100 reads.
 
 \newpage
 
-![Figure S2.6](./figures/02-chapter/figure-S6.png)
+![Figure S2.6](figures/02-chapter/figure-S6.png)
 **Supplementary Figure 6**. *Distribution of fixed mutations in the genome*. Plot showing fixed variants identified across the crew members that passed our quality controls. We included variants if they were present in 98% or more of at least 100 reads. Mutations that are present in the 5’ and 3’ UTRs are excluded from this plot.
 
 \newpage
 
-![Figure S2.7](./figures/02-chapter/figure-S7.png)
+![Figure S2.7](figures/02-chapter/figure-S7.png)
 **Supplementary Figure 7**. *Low frequency shared variants are present in the non-boat control specimen*.  Four variants shared at low-frequency between crew members are also detected in a specimen not collected from the boat but included as a control in both sequencing runs (Specimen 10136). This observation suggests that these are not de novo low-frequency variants that arise on the boat and spread between the crew, but rather sequencing contamination or variant calling errors common to samples from the two sequencing runs.
 
-\newpage
-
-## References

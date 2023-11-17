@@ -1,4 +1,9 @@
-# Uncovering the dynamics of viral evolution and pathogenesis from high-throughput datasets: a computational perspective
+---
+title: 'Uncovering the dynamics of viral evolution and pathogenesis from high-throughput datasets: a computational perspective'
+author: William W. Hannon
+affiliation: University of Washington
+chair: Jesse D. Bloom
+---
 
 High-throughput experiments, including deep sequencing and deep mutational scanning (DMS), provide insight into the genotypic and phenotypic landscapes traversed by an evolving virus. However, interpreting the large amount of data produced by these techniques requires a robust computational strategy. Recognizing this challenge, in my dissertation, I describe how I used a computational approach to tackle three distinct but interconnected aspects of viral evolution.
 

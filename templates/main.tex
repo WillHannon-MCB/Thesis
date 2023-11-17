@@ -9,6 +9,7 @@
 \usepackage{natbib}
 \usepackage{graphicx} 
 \usepackage{amsmath} 
+\usepackage{titlesec}
 \usepackage[T1]{fontenc}
 \usepackage[hidelinks]{hyperref}
 \usepackage[margin=1in, includefoot, letterpaper]{geometry}
@@ -50,8 +51,8 @@ University of Washington \\
 \vspace{1cm}
 Reading Committee: \\
 Jesse D. Bloom, Chair \\
-Gavin Ha
-Alison Feder
+Gavin Ha \\
+Alison Feder \\
 \vspace{1cm}
 Program Authorized to Offer Degree: \\
 Molecular and Cellular Biology
@@ -67,25 +68,31 @@ Molecular and Cellular Biology
 %*****************************************
 % Table of Contents
 %*****************************************
+\textbf{Table of Contents}
 \newpage
 
 %*****************************************
 % List of Figures
 %*****************************************
+\textbf{List of Figures}
 \newpage
 
 %*****************************************
 % Acknowledgements
 %*****************************************
+\include{acknowledgements}
 \newpage
 
 %*****************************************
 % Chapters
 %*****************************************
+$body$
 \newpage
 
 %*****************************************
 % Bibliography
 %*****************************************
+\bibliographystyle{plainnat} 
+\bibliography{bibliography/references.bib}
 
 \end{document}

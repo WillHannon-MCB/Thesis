@@ -1,5 +1,3 @@
-# Acknowledgments
-
 Joining Fred Hutch was the best decision I made in my academic career. I never cease to be amazed by its kind and supportive community, and I feel genuinely proud to be a member of it. The lessons I’ve learned here, both academically and personally, will never leave me.
 
 Spring 2020 proved to be an exceptionally chaotic time to join a lab, particularly one that studies viruses. At the time, I knew nothing about virology and *almost* nothing about programming. Nevertheless, I embarked on a research project that blended both of these topics. I'm beyond grateful to Jesse for offering the perfect balance of support and autonomy. Under Jesse's guidance, I gained the skills that made the work in this dissertation possible. The breadth of topics covered here is a testament to Jesse’s willingness to let his trainees follow their interests.

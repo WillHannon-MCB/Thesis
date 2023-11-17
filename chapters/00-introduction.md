@@ -1,4 +1,4 @@
-# Chapter 0: Introduction
+# Introduction
 
 Viruses evolve rapidly, accumulating mutations that escape immunity, improve transmission, and enable adaptation to their hosts. This rapid evolution makes it difficult to develop successful vaccines and therapies. However, by studying viral evolution, we can try to anticipate adaptive mutations and develop more effective strategies for prevention and treatment.
 
