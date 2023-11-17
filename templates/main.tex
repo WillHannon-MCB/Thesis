@@ -1,5 +1,5 @@
 % ----------------------------------------
-% Configuration of the document
+% Set the document class
 % ----------------------------------------
 \documentclass[12pt,oneside,letterpaper]{report}
 
@@ -10,11 +10,52 @@
 \usepackage{graphicx} 
 \usepackage{amsmath} 
 \usepackage{titlesec}
+\usepackage{fancyhdr}
 \usepackage[T1]{fontenc}
-\usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
 \usepackage[margin=1in, includefoot, letterpaper]{geometry}
 \usepackage{setspace}
-\setcounter{section}{-1}
+
+% ----------------------------------------
+% Configuration of the document
+% ----------------------------------------
+
+% Set the chapter number a 0 for the Introduction
+\setcounter{chapter}{-1}
+
+% Set section numbering depth
+\setcounter{secnumdepth}{2}
+
+% Scale images if necessary, so that they will not overflow the page
+\makeatletter
+\setkeys{Gin}{width=\linewidth,height=0.66\textheight,keepaspectratio}
+\makeatother
+
+% Set the spacing
+\onehalfspacing
+
+% Configure the headers and footers
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[R]{\thepage} 
+\setlength{\headheight}{14.5pt}
+\addtolength{\topmargin}{-2.5pt}
+
+% Configure the chapter headings
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\centering} 
+  {\large\chaptertitlename\ \thechapter} 
+  {20pt} 
+  {\Large} 
+
+% Configure the hyperlinks
+\hypersetup{
+    colorlinks = true,
+    linkcolor = black,
+    filecolor = black,      
+    urlcolor = blue,
+    citecolor = black,
+}
 
 % ----------------------------------------
 % Body of the document
@@ -35,6 +76,7 @@ William W. Hannon
 %*****************************************
 % Title Page
 %*****************************************
+\begin{singlespace}
 \thispagestyle{empty}
 \begin{center}
 \huge{Uncovering the dynamics of viral evolution and pathogenesis from high-throughput datasets: a computational perspective} \\
@@ -53,11 +95,12 @@ University of Washington \\
 Reading Committee: \\
 Jesse D. Bloom, Chair \\
 Gavin Ha \\
-Alison Feder \\
+Erick Matsen \\
 \vspace{1cm}
 Program Authorized to Offer Degree: \\
 Molecular and Cellular Biology
 \end{center}
+\end{singlespace}
 \newpage
 
 %*****************************************
@@ -75,7 +118,7 @@ Molecular and Cellular Biology
 %*****************************************
 % List of Figures
 %*****************************************
-\textbf{List of Figures}
+\listoffigures
 \newpage
 
 %*****************************************
@@ -93,7 +136,7 @@ $body$
 %*****************************************
 % Bibliography
 %*****************************************
-\bibliographystyle{plainnat} 
+\bibliographystyle{plain}
 \bibliography{bibliography/references.bib}
 
 \end{document}
