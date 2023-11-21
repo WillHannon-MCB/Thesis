@@ -1,13 +1,12 @@
 all: pdf
 
-# Generate the PDF using xelatex
 pdf: abstract acknowledgements body
 	xelatex -output-directory=output output/main.tex
 	bibtex output/main.aux
 	xelatex -output-directory=output output/main.tex
 	xelatex -output-directory=output output/main.tex
 
-body: 
+body: output
 	cp -r figures/ output/figures
 	pandoc \
 		--natbib \
@@ -16,19 +15,21 @@ body:
 		-o output/main.tex \
 		chapters/*.md
 
-acknowledgements:
+acknowledgements: output
 	pandoc \
 		-o output/acknowledgements.tex \
 		--template=templates/acknowledgements.tex \
 		frontmatter/acknowledgements.md
 
-abstract:
+abstract: output
 	pandoc \
 		-o output/abstract.tex \
 		--template=templates/abstract.tex \
 		frontmatter/abstract.md
 
-# Clean the output directory
+output:
+	mkdir -p output
+
 clean:
 	rm -rf output/*
 
