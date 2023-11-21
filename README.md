@@ -24,9 +24,9 @@ make clean
 
 ## Overview
 
-`bibliography`: The bibtex bibliography
-`chapters`: The body of the thesis (written in `markdown`)
-`frontmatter`: The abstract and acknowledgements (written in `markdown`)
-`figures`: Figures for each chapter
-`templates`: LaTeX templates for converting the markdown files into LaTeX with `Pandoc`
-`Makefile`: The pipeline to compile the Thesis
+- `bibliography`: The bibtex bibliography
+- `chapters`: The body of the thesis (written in `markdown`)
+- `frontmatter`: The abstract and acknowledgements (written in `markdown`)
+- `figures`: Figures for each chapter
+- `templates`: LaTeX templates for converting the markdown files into LaTeX with `Pandoc`
+- `Makefile`: The pipeline to compile the Thesis
