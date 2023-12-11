@@ -1,6 +1,6 @@
 ---
 title: 'Uncovering the dynamics of viral evolution and pathogenesis from high-throughput datasets: a computational perspective'
-author: William W. Hannon
+author: William Hannon
 affiliation: University of Washington
 chair: Jesse D. Bloom
 ---
